@@ -1,0 +1,69 @@
+## Ignore Visual Studio temporary files, build results, and user-specific files
+
+#environemnt variables 
+.env
+
+# Build results
+[Oo]bj/
+[Ll]og/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider / VS Code project files
+.idea/
+.vscode/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# .NET Core project lock files
+project.lock.json
+project.fragment.lock.json
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# NuGet
+*.nupkg
+packages/
+*.snupkg
+
+# Others
+*.DS_Store
+*.class
+*.swp
+
+# Publish artifacts
+*.Publish.xml
+
+# DotCover
+.idea/.dotCover
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+*.trx
+
+# T4 Text Templates
+*.generated.cs
+
+# Backup & temp files
+*~
+*.tmp
+
+# Node modules (if using frontend tooling)
+node_modules/
+
+# Python cache (if using IronPython or scripting)
+__pycache__/
+
+# Optional: Ignore your secrets file (if you have appsettings.Secrets.json or similar)
+appsettings.*.json
+!appsettings.json
