@@ -29,13 +29,13 @@ DB_NAME=mydb
 
 ## 2-Install the node modules fro frontend and backend folders
 
-### `docker-compose run --rm npm-frontend npm install`
+### `docker-compose-dev run --rm npm-frontend npm install`
 
-### `docker-compose run --rm npm-backend npm install`
+### `docker-compose-dev run --rm npm-backend npm install`
 
 ## 3-Start the three containers
 
-### `docker-compose up -d mysql backend frontend --build`
+### `docker-compose-dev up -d mysql backend frontend --build`
 
 ## 4-Enter in the backend container and run migrate and seed
 
