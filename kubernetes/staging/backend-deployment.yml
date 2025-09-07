@@ -14,9 +14,26 @@ spec:
     spec:
       containers:
         - name: backend
-          image: your-backend-image:latest
+          image: alanomam/kub-wardrobe-backend:3
+          env:
+            - name: DB_HOST
+              value: mysql # <-- connects to the mysql service by name
+            - name: DB_PORT
+              value: "3306"
+            - name: DB_USER
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: MYSQL_USER
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: MYSQL_PASSWORD
+            - name: DB_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: MYSQL_DATABASE
           ports:
             - containerPort: 4000
-          envFrom:
-            - secretRef:
-                name: backend-secret
