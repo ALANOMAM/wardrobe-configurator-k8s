@@ -9,5 +9,5 @@ COPY . .
 
 EXPOSE 4000
 
-# CMD ["npm", "run", "dev"] #when using docker compose
+#when using kubernetes
 CMD ["node", "./bin/www"]  
