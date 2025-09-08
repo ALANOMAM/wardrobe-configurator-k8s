@@ -29,15 +29,19 @@ DB_NAME=mydb
 
 ## 2-Install the node modules fro frontend and backend folders
 
-### `docker-compose-dev run --rm npm-frontend npm install`
+### `docker-compose -f docker-compose-dev.yml run --rm npm-frontend npm install`
 
-### `docker-compose-dev run --rm npm-backend npm install`
+### `docker-compose -f docker-compose-dev.yml run --rm npm-backend npm install`
 
-## 3-Start the three containers
+## 3-Solve possible CORS issues by making sure that the file "app.js" in backend has
 
-### `docker-compose-dev up -d mysql backend frontend --build`
+### `origin: "http://localhost:3000"`
 
-## 4-Enter in the backend container and run migrate and seed
+## 4-Start the three containers
+
+### `docker-compose -f docker-compose-dev.yml up -d mysql backend frontend --build`
+
+## 5-Enter in the backend container and run migrate and seed
 
 ### `docker exec -it <backend-container-id> sh`
 
@@ -47,3 +51,7 @@ The app runs in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 This project uses [Prime React](https://primereact.org/) and basic css for styling.
+
+## 6-Turn off all the containers
+
+### `docker-compose -f docker-compose-dev.yml down`

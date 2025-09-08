@@ -10,8 +10,8 @@ const app = express();
 
 app.use(
   cors({
-    // origin: "http://localhost:3000", // Allow only frontend origin (IN DEV MODE)
-    origin: "http://192.168.49.2:30080", // Allow only frontend origin (MINIKUBE FRONTEND NODE PORT)
+    origin: "http://localhost:3000", // Allow only frontend origin (IN DEV MODE)
+    //origin: "http://192.168.49.2:30080", // Allow only frontend origin (MINIKUBE FRONTEND NODE PORT)
     credentials: true, // if you're using cookies or auth headers
   })
 );
