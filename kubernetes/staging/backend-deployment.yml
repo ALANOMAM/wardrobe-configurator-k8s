@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: alanomam/kub-wardrobe-backend:3
+          image: alanomam/kub-wardrobe-backend:5
           env:
             - name: DB_HOST
               value: mysql # <-- connects to the mysql service by name
