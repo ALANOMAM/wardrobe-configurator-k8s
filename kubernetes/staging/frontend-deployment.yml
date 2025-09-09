@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: alanomam/kub-wardrobe-frontend:6
+          image: alanomam/kub-wardrobe-frontend:7
           ports:
             - containerPort: 80
