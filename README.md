@@ -29,13 +29,13 @@ DB_NAME=mydb
 
 ## 2-Install the node modules fro frontend and backend folders
 
-### `docker-compose -f docker-compose-dev.yml run --rm npm-frontend npm install`
+### `docker compose -f docker-compose-dev.yml run --rm npm-frontend npm install`
 
-### `docker-compose -f docker-compose-dev.yml run --rm npm-backend npm install`
+### `docker compose -f docker-compose-dev.yml run --rm npm-backend npm install`
 
 ## 3-Start the three containers
 
-### `docker-compose -f docker-compose-dev.yml up -d mysql backend frontend --build`
+### `docker compose -f docker-compose-dev.yml up -d mysql backend frontend --build`
 
 ## 4-Enter in the backend container and run migrate and seed
 
@@ -50,4 +50,4 @@ This project uses [Prime React](https://primereact.org/) and basic css for styli
 
 ## 5-Turn off all the containers
 
-### `docker-compose -f docker-compose-dev.yml down`
+### `docker compose -f docker-compose-dev.yml down`
